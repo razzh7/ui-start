@@ -1,0 +1,45 @@
+{
+  "name": "ui-start",
+  "private": false,
+  "version": "0.0.1",
+  "description": "",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "author": {
+    "name": "razzh",
+    "email": "razzhavenir@163.com"
+  },
+  "scripts": {
+    "prepare": "husky install",
+    "eslint": "eslint components/ --fix --cache --quiet --ext .js,.jsx,.ts,.tsx",
+    "tsc": "tsc --noEmit --skipLibCheck"
+  },
+  "keywords": [
+    "ui",
+    "components"
+  ],
+  "license": "ISC",
+  "devDependencies": {
+    "@commitlint/cli": "^19.3.0",
+    "@commitlint/config-angular": "^19.3.0",
+    "@types/node": "^20.12.12",
+    "@typescript-eslint/eslint-plugin": "^7.10.0",
+    "@typescript-eslint/parser": "^7.10.0",
+    "conventional-changelog": "^6.0.0",
+    "conventional-changelog-cli": "^5.0.0",
+    "eslint": "^9.3.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "husky": "^9.0.11",
+    "jsdom": "^24.1.0",
+    "lint-staged": "^15.2.5",
+    "twist-scripts": "^0.0.4",
+    "typescript": "^5.4.5",
+    "vitest": "^1.6.0"
+  },
+  "lint-staged": {
+    "components/*.{tsx,jsx,ts,js}": [
+      "npm run eslint",
+      "npm run tsc"
+    ]
+  }
+}
