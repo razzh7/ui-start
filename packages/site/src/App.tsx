@@ -1,5 +1,5 @@
 import React from 'react';
-import { Tag } from '../../ui/components';
+import { Tag } from 'ui';
 
 function App() {
   return (
