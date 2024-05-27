@@ -8,6 +8,8 @@
   },
   "scripts": {
     "prepare": "husky install",
+    "init": "pnpm -C ./packages/ui run init",
+    "start": "pnpm -C ./packages/site run start",
     "eslint": "eslint components/ --fix --cache --quiet --ext .js,.jsx,.ts,.tsx",
     "tsc": "tsc --noEmit --skipLibCheck"
   },
