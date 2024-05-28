@@ -6,6 +6,7 @@
   "scripts": {
     "prepare": "husky install",
     "init": "pnpm -C ./packages/ui run init",
+    "dev": "pnpm -C ./packages/ui run start",
     "start": "pnpm -C ./packages/site run start",
     "eslint": "eslint packages/ --fix --cache --quiet --ext .js,.jsx,.ts,.tsx",
     "tsc": "tsc --noEmit --skipLibCheck",
