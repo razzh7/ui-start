@@ -3,9 +3,7 @@ const { getRgbStr } = require('@arco-design/color');
 
 module.exports = {
   install(_, __, functions) {
-    functions.add('get-rgb-str', (color) => {
-      return getRgbStr(color.value);
-    });
+    functions.add('get-rgb-str', (color) => getRgbStr(color.value));
 
     functions.add('get-var-str', (color) => {
       if (color.value.indexOf('rgb') === 0) {
@@ -13,5 +11,5 @@ module.exports = {
       }
       return getRgbStr(color.value);
     });
-  },
+  }
 };

@@ -9,6 +9,7 @@
   ],
   "main": "lib/index.js",
   "module": "es/index.js",
+  "types": "es/index.d.ts",
   "files": [
     "dist",
     "lib",
@@ -19,12 +20,12 @@
     "email": "razzhavenir@163.com"
   },
   "scripts": {
-    "init": "twist-scripts lessgen && twist-scripts build:component",
+    "init": "twist-scripts lessgen && pnpm run build",
     "start": "twist-scripts dev:component",
     "build": "pnpm run build:component && pnpm run build:style && pnpm run dtsgen",
     "build:component": "twist-scripts build:component",
     "build:style": "twist-scripts build:style",
-    "dtsgen": "twist-scripts dtsgen './components/**/*.{tsx,ts}'",
+    "dtsgen": "twist-scripts dtsgen 'components/**/*.{tsx,ts}'",
     "docgen": "twist-scripts docgen",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
   },
@@ -35,7 +36,6 @@
   "devDependencies": {
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
-    "less": "^4.2.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   }
