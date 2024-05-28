@@ -47,9 +47,6 @@ importers:
       lint-staged:
         specifier: ^15.2.5
         version: 15.2.5
-      twist-scripts:
-        specifier: ^0.0.6
-        version: 0.0.6(@types/node@18.19.33)(typescript@5.3.3)
       typescript:
         specifier: ~5.3.3
         version: 5.3.3
@@ -75,6 +72,9 @@ importers:
       '@types/react-dom':
         specifier: ^18.3.0
         version: 18.3.0
+      twist-scripts:
+        specifier: ^0.0.7
+        version: 0.0.7(@types/node@18.19.33)(typescript@5.3.3)
 
   packages/ui:
     dependencies:
@@ -94,6 +94,9 @@ importers:
       react-dom:
         specifier: ^18.3.1
         version: 18.3.1(react@18.3.1)
+      twist-scripts:
+        specifier: ^0.0.7
+        version: 0.0.7(@types/node@18.19.33)(typescript@5.3.3)
 
 packages:
 
@@ -2406,8 +2409,8 @@ packages:
   tslib@2.6.2:
     resolution: {integrity: sha512-AEYxH93jGFPn/a2iVAwW87VuUIkR1FVUKB77NwMF7nBTDkDrrT/Hpt/IrCJ0QXhW27jTBDcf5ZY7w6RiqTMw2Q==}
 
-  twist-scripts@0.0.6:
-    resolution: {integrity: sha512-wfeVyDXDlLdHeInCnWCezaMAEluGa8Iu2dQYZCXT+ko3g9M04noXTLfTdhA8X7iMM0zjnsZVmH/K7V1eA91H2w==}
+  twist-scripts@0.0.7:
+    resolution: {integrity: sha512-jyuD5Q2uBlIBBYRZ1VtNjO4mRcvCxtugJvtJXsT0x9zQAzADwIyPzMHhFXgq73Noi5ZFtv5+2ObxgvP0MmZ5ew==}
     hasBin: true
 
   type-check@0.4.0:
@@ -5150,7 +5153,7 @@ snapshots:
 
   tslib@2.6.2: {}
 
-  twist-scripts@0.0.6(@types/node@18.19.33)(typescript@5.3.3):
+  twist-scripts@0.0.7(@types/node@18.19.33)(typescript@5.3.3):
     dependencies:
       '@vitejs/plugin-react': 4.3.0(vite@5.2.11(@types/node@18.19.33)(less@4.2.0))
       chalk: 4.1.2
