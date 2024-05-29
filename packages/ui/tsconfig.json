@@ -13,9 +13,9 @@
     "esModuleInterop": true,
     "incremental": true,
     "allowSyntheticDefaultImports": true,
-    "forceConsistentCasingInFileNames": true,
+    "forceConsistentCasingInFileNames": true
   },
-  "include": ["components"],
+  "include": ["components/**/*.ts", "components/**/*.tsx"],
   "exclude": ["node_modules"]
 }
 
