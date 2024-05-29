@@ -7,4 +7,4 @@ module.exports = {
       ['chore', 'build', 'ci', 'docs', 'feat', 'fix', 'perf', 'refactor', 'revert', 'style', 'test']
     ]
   }
-}
+};
