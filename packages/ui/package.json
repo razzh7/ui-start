@@ -22,7 +22,7 @@
   "scripts": {
     "init": "twist-scripts lessgen && pnpm run build",
     "start": "twist-scripts dev:component",
-    "build": "pnpm run build:component && pnpm run build:style && pnpm run dtsgen",
+    "build": "pnpm run build:component && pnpm run build:style",
     "build:component": "twist-scripts build:component",
     "build:style": "twist-scripts build:style",
     "dtsgen": "twist-scripts dtsgen 'components/**/*.{tsx,ts}'",
@@ -38,6 +38,6 @@
     "@types/react-dom": "^18.3.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "twist-scripts": "^0.0.7"
+    "twist-scripts": "^0.1.0-alpha.1"
   }
 }
