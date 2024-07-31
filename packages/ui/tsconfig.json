@@ -1,20 +1,7 @@
 {
+  "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "outDir": "es",
-    "jsx": "react",
-    "module": "es6",
-    "target": "es6",
-    "lib": ["dom","esnext"],
-    "moduleResolution": "node",
-    "declaration": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "forceConsistentCasingInFileNames": true
+    "outDir": "es"
   },
-  "include": ["components/**/*.ts", "components/**/*.tsx"],
-  "exclude": ["node_modules"]
+  "include": ["components/**/*.ts", "components/**/*.tsx"]
 }
-

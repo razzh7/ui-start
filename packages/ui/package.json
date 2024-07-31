@@ -1,43 +1,13 @@
 {
-  "name": "ui",
-  "private": false,
-  "version": "0.0.1",
-  "description": "ui components",
-  "keywords": [
-    "ui",
-    "ui-components"
-  ],
+  "name": "@ui/components",
   "main": "lib/index.js",
   "module": "es/index.js",
   "types": "es/index.d.ts",
-  "files": [
-    "dist",
-    "lib",
-    "es"
-  ],
-  "author": {
-    "name": "razzh",
-    "email": "razzhavenir@163.com"
-  },
   "scripts": {
-    "init": "twist-scripts lessgen && pnpm run build",
-    "start": "twist-scripts dev:component",
-    "build": "pnpm run build:component && pnpm run build:style",
-    "build:component": "twist-scripts build:component",
-    "build:style": "twist-scripts build:style",
-    "dtsgen": "twist-scripts dtsgen 'components/**/*.{tsx,ts}'",
-    "docgen": "twist-scripts docgen",
-    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
-  },
-  "license": "MIT",
-  "dependencies": {
-    "@arco-design/color": "^0.4.0"
-  },
-  "devDependencies": {
-    "@types/react": "^18.3.3",
-    "@types/react-dom": "^18.3.0",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "twist-scripts": "^0.1.0-alpha.1"
+    "dev": "twist-scripts dev:component",
+    "build:component": "cross-env UMD_GLOBAL_NAME=UI UMD_FILE_NAME=ui-component.min.js BUILD_ENV_DIST_FILENAME_CSS=ui-component.min.css twist-scripts build:component",
+    "build:style:dev": "cross-env BUILD_ENV_MODE=development BUILD_ENV_DIST_FILENAME_CSS=ui-component.css twist-scripts build:style",
+    "build:umd:dev": "cross-env BUILD_ENV_MODE=development UMD_GLOBAL_NAME=UI UMD_FILE_NAME=ui-component.development.js twist-scripts build:umd",
+    "build": "pnpm build:component && pnpm build:umd:dev && pnpm build:style:dev"
   }
 }
